@@ -14,25 +14,22 @@
         }
     }
 });*/
-$(document).ready(function makeGrid(){
-    $('#sizePicker').submit(function () {
-            event.preventDefault();
+$(document).ready(function (){
+    $('#sizePicker').submit(function makeGrid() {
+        event.preventDefault();
+        $('#pixelCanvas').empty();
+        var height = $('#inputHeight').val();
+        var length = $('#inputWeight').val();
 
-            var height = $('#inputHeight').val();
-            var length = $('#inputWeight').val();
-            
-            for (var i = 0; i < height; i++){
-                $('#pixelCanvas').append('<tr></tr>');
-            }
-            for (var j = 0; j < length; j++){
-                $('tr').append('<td></td>');
-            }   
-            //makeGrid(height,length);
-        });
+        for (var i = 0; i < height; i++){
+            $('#pixelCanvas').append('<tr></tr>');
+        }
+        for (var j = 0; j < length; j++){
+            $('tr').append('<td></td>');
+        }
     });
-    //creating cells
-    /*$("input[type='submit']").on('click',function (){
-        $('#pixelCanvas').attr('col', length);
-        for (i = 0; i < width; i++){
-            $('#pixelCanvas').append('tr'); <tr><td></td></tr>
-        }*/
+        
+    $('td').on('click', function(){
+            $(this).css('background-color', $('#colorPicker').val());
+            });
+    });
