@@ -15,7 +15,7 @@
     }
 });*/
 $(document).ready(function (){
-    $('#sizePicker').submit(function makeGrid() {
+    $('#sizePicker').on('submit',function makeGrid() {
         event.preventDefault();
         $('#pixelCanvas').empty();
         var height = $('#inputHeight').val();
@@ -25,11 +25,33 @@ $(document).ready(function (){
             $('#pixelCanvas').append('<tr></tr>');
         }
         for (var j = 0; j < length; j++){
-            $('tr').append('<td></td>');
+            $('tr').append('<td class="cells"></td>');
         }
     });
-        
-    $('td').on('click', function(){
-            $(this).css('background-color', $('#colorPicker').val());
-            });
+     
+    $('#pixelCanvas').on('click','td',function () {
+        //$(this).clear();
+        var paint = $('#colorPicker').val();
+        $(this).css('background-color', paint);
+      });
     });
+   /*
+  $(document).ready(function (){
+    $('#sizePicker').on('submit', function makeGrid() {
+        event.preventDefault();
+        $('#pixelCanvas').empty();
+        var height = $('#inputHeight').val();
+        var length = $('#inputWeight').val();
+
+        for (var i = 0; i < height; i++){
+            $('#pixelCanvas').append('<tr></tr>');
+        }
+        for (var j = 0; j < length; j++){
+            $('tr').append('<td class="cells"></td>');
+        }
+    });
+	$('#pixelCanvas').on('click','td', function () {
+        var paint = $('#colorPicker').val();
+        $(this).css('background-color', paint);
+      });
+	  });*/
