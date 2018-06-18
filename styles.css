@@ -31,6 +31,10 @@ tr {
     height: 20px;
 }
 
+.cells {
+    background-color: white;
+}
+
 td {
     width: 20px;
 }
