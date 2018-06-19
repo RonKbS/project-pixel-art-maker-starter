@@ -16,25 +16,23 @@ $(document).ready(function (){
         }
         
         for (var j = 0; j < length; j++){
-            var c = '<td></td>'
+            var c = '<td class "cells"></td>'
             $('tr').append(c);
         }
-        k = 0;
+       /* var k = 0;
         $('td').each(function(){
-            $(this).addClass(k.toString());
-        });
-        /*for (var k = 0; k < lenght * width; k++){...was going for each cell...class=cells'+ (j).toString() + '
-            $('td').addClass(k.toString());
-        }*/
+            var m = $(this).index() + k;
+            $(this).addClass(m.toString());...assign each cell a different class value
+            k = k + 1;
+        });*/
     });
-     
-    /*$('#pixelCanvas').on('click','td',function () {
-        $(this).css('background-color', $('#colorPicker').val());
-      },
-    function(){
-        $(this).toggleClass('.cells');
-    });*/
-    $('#pixelCanvas').on('click','.cells', function () {
-        $(this).css('background-color',$('#colorPicker').val());
+
+    $('#pixelCanvas').on('click','td', function() {
+        if ($(this).css('background-color') == $('h1').css('background-color')){
+            $(this).css('background-color',$('#colorPicker').val());
+        }
+        else {
+            $(this).css('background-color', '');
+        }
       });
     });//document ready
