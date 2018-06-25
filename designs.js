@@ -28,11 +28,19 @@ $(document).ready(function (){
     });
 
     $('#pixelCanvas').on('click','td', function() {
+        $('#pixelCanvas').on('mouseover','td', function() {
+            if ($(this).css('background-color') == $('h1').css('background-color')){
+                $(this).css('background-color',$('#colorPicker').val());
+            }
+            else {
+                $(this).css('background-color', '');
+            }
+        });
         if ($(this).css('background-color') == $('h1').css('background-color')){
             $(this).css('background-color',$('#colorPicker').val());
         }
         else {
             $(this).css('background-color', '');
         }
-      });
+    });
     });//document ready
