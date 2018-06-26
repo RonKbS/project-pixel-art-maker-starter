@@ -39,8 +39,8 @@ $(document).ready(function (){
         if ($(this).css('background-color') == $('h1').css('background-color')){
             $(this).css('background-color',$('#colorPicker').val());
         }
-        else {
+        /*else {
             $(this).css('background-color', '');
-        }
+        }*/
     });
     });//document ready
