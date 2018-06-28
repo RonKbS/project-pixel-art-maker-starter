@@ -27,8 +27,8 @@ $(document).ready(function (){
         });*/
     });
 
-    $('#pixelCanvas').on('click','td', function() {
-        $('#pixelCanvas').on('mouseover','td', function() {
+    $('#pixelCanvas').on('click', 'td', function() {
+        $('#pixelCanvas').on( 'mouseover','td', function() {
             if ($(this).css('background-color') == $('h1').css('background-color')){
                 $(this).css('background-color',$('#colorPicker').val());
             }
@@ -36,11 +36,13 @@ $(document).ready(function (){
                 $(this).css('background-color', '');
             }
         });
+    });
+    $('#pixelCanvas').on('dblclick','td', function() {    
         if ($(this).css('background-color') == $('h1').css('background-color')){
             $(this).css('background-color',$('#colorPicker').val());
         }
-        /*else {
+        else {
             $(this).css('background-color', '');
-        }*/
+        }
     });
     });//document ready
