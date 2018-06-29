@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="designs.js"></script>
     <title>Pixel Art Maker!</title>
 </head>
@@ -18,14 +18,13 @@
             <i>and single click to exit</i>
         </p>
         <p>
-            <i>Double click to select change one</i>
+            <i>Double click to change one</i>
         </p>
         <p>
-            <i>and double click to unselect</i>
+            <i>and double click to exit</i>
         </p>
     </div>
     <h2>Choose Grid Size</h2>
-    <div id = 'adjust'>
         <form id="sizePicker">
             Grid Height:
             <input type="number" id="inputHeight" name="height" min="1" value="1">
@@ -36,7 +35,6 @@
 
         <h2>Pick A Color</h2>
         <input type="color" id="colorPicker">
-    </div>
     <h2>Design Canvas</h2>
     <table id="pixelCanvas"></table>
 

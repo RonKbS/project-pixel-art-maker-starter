@@ -1,6 +1,6 @@
 // Select color input
 // Select size input
-//http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+//http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 
 
 $(document).ready(function (){
